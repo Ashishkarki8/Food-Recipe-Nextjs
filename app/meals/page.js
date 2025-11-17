@@ -53,25 +53,37 @@ const MealsPage = () => {
         setData((prevData) => ({ ...prevData, isLoading: true, error: null }));
 
         try {
-          // Build query with filters
-          let queryParams = `from=0&size=12&q=${data.inputField}&sort=${filters.sortBy}`;
-          
+          // Build query parameters properly - NO NESTING!
+          const params = new URLSearchParams({
+            from: '0',
+            size: '12',
+            q: data.inputField,
+          });
+
+          // Add optional filters
           if (filters.cuisine) {
-            queryParams += `&tags=${filters.cuisine}`;
+            params.append('tags', filters.cuisine);
           }
           
           if (filters.diet) {
-            queryParams += `&tags=${filters.diet}`;
+            params.append('tags', filters.diet);
           }
 
-        let response = await fetch(`/api/search?query=${queryParams}`);
+          // Build the URL - pass params DIRECTLY
+          const url = `/api/search?${params.toString()}`;
+          
+          console.log("🔍 Fetching:", url);
 
+          let response = await fetch(url);
 
           if (!response.ok) {
             throw new Error("Failed to fetch recipes");
           }
 
           const result = await response.json();
+          
+          console.log("✅ Results:", result);
+          
           setData((prevData) => ({
             ...prevData,
             recipeData: result,
@@ -79,6 +91,7 @@ const MealsPage = () => {
             error: null,
           }));
         } catch (error) {
+          console.error("❌ Error:", error);
           setData((prevData) => ({
             ...prevData,
             isLoading: false,
