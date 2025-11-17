@@ -1,0 +1,387 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 90%;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ddd6cb;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #f9572a, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: #cfa69b;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.headerActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.backLink {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.backLink:hover {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  box-shadow: 0 0 12px rgba(242, 100, 18, 0.8);
+  transform: translateY(-2px);
+}
+
+.clearBtn {
+  padding: 0.75rem 1.5rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clearBtn:hover {
+  background: #c82333;
+  box-shadow: 0 0 12px rgba(220, 53, 69, 0.8);
+  transform: translateY(-2px);
+}
+
+.main {
+  width: 90%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.stats {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2c1e19 0%, #25200f 100%);
+  border: 2px solid #3d2f24;
+  border-radius: 12px;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ddd6cb;
+}
+
+.stats strong {
+  color: #ff9b05;
+  font-size: 1.3rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #2c1e19 0%, #25200f 100%);
+  border: 2px dashed #3d2f24;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.emptyIcon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.emptyState h2 {
+  color: #ddd6cb;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.emptyState p {
+  color: #cfa69b;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.searchLink {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.searchLink:hover {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  box-shadow: 0 0 12px rgba(242, 100, 18, 0.8);
+  transform: translateY(-2px);
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.meal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  color: #ddd6cb;
+  background: linear-gradient(90deg, #2c1e19, #25200f);
+}
+
+.meal:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(249, 87, 42, 0.4);
+}
+
+.removeBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+  background: rgba(26, 20, 16, 0.9);
+  border: 2px solid #3d2f24;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.removeBtn:hover {
+  background: #dc3545;
+  transform: scale(1.1) rotate(90deg);
+  border-color: #c82333;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background: #1a1410;
+}
+
+.headerText {
+  padding: 0.5rem 1rem 0 1rem;
+}
+
+.headerText h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #ddd6cb;
+}
+
+.author {
+  color: #cfa69b;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.cookTime {
+  color: #ff9b05;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+}
+
+.content {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.actions a {
+  flex: 1;
+  padding: 0.75rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.actions a:hover {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+  box-shadow: 0 0 12px rgba(242, 100, 18, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .header {
+    width: 95%;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .meals {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .headerActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .backLink,
+  .clearBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .meals {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .image {
+    height: 12rem;
+  }
+
+  .removeBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .headerText h2 {
+    font-size: 1.3rem;
+  }
+
+  .emptyState {
+    padding: 3rem 1.5rem;
+  }
+
+  .emptyIcon {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .backLink,
+  .clearBtn {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .meals {
+    gap: 1.5rem;
+  }
+
+  .image {
+    height: 10rem;
+  }
+
+  .removeBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .headerText h2 {
+    font-size: 1.1rem;
+  }
+
+  .emptyState {
+    padding: 2rem 1rem;
+  }
+
+  .emptyIcon {
+    font-size: 3rem;
+  }
+
+  .searchLink {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
