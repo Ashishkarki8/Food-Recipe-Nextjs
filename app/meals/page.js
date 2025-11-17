@@ -64,16 +64,8 @@ const MealsPage = () => {
             queryParams += `&tags=${filters.diet}`;
           }
 
-          let response = await fetch(
-            `https://tasty.p.rapidapi.com/recipes/list?${queryParams}`,
-            {
-              method: "GET",
-              headers: {
-                "X-RapidAPI-Host": "tasty.p.rapidapi.com",
-                "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
-              },
-            }
-          );
+        let response = await fetch(`/api/search?query=${queryParams}`);
+
 
           if (!response.ok) {
             throw new Error("Failed to fetch recipes");

@@ -11,7 +11,7 @@ async function getMeal(mealId) {
     {
       method: 'GET',
       headers: {
-        'x-rapidapi-key': process.env.RAPIDAPI_KEY,
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY,  //her is only rapid api key
         'x-rapidapi-host': 'tasty.p.rapidapi.com',
       },
     }

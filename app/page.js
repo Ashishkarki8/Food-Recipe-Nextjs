@@ -1,19 +1,3 @@
-// import Image from "next/image";
-// import styles from "./page.module.css";
-// import Link from "next/link";
-
-
-// export default function Home() {
-//   console.log("hi")
-//   return (
-//    <main>
-//     <h1>welcome to this react course</h1>
-//     <p>let &apos; s get started</p>
-//     <p><Link href="/about">About Us</Link></p> {/* way to create a link same page mah basera arko page mah jani technique jasley page refresh handaina*/}
-//    </main>
-//   );
-// }
-
 
 
 //project-03
